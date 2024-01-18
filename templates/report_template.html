@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title_text }}</title>
+</head>
+<body>
+
+    <h1>{{ title_text }}</h1>
+
+    <div>
+        <h2>User inputs:</h2>
+        <ul>
+            <li><strong>Year:</strong> {{ year }}</li>
+            <li><strong>Geometry:</strong> {{ geom }}</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Landsat Median Composite and Scene count:</h2>
+        <!-- Add the code for displaying the plot here -->
+        <!-- For example, you can use an img tag with the plot's source -->
+        <img src="plots/rgb_count.png" alt="rgb_count.png">
+    </div>
+
+    <div>
+        <h2>Means and coefficient of variation (cov) by spectral band:</h2>
+        <!-- Add the code for displaying the plot here -->
+        <!-- For example, you can use an img tag with the plot's source -->
+        <img src="plots/mean_cov.png" alt="mean_cov.png">
+    </div>
+
+    <div>
+        <h2>Medians and median absolute deviation (mad) by spectral band::</h2>
+        <!-- Add the code for displaying the plot here -->
+        <!-- For example, you can use an img tag with the plot's source -->
+        <img src="plots/median_mad.png" alt="median_mad.png">
+    </div>
+
+</body>
+</html>
