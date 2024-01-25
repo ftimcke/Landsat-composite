@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page_title_text }}</title>
+
+    <style>
+        body {
+            font-family: 'DIN', sans-serif; /* Replace 'DIN' with the desired font name */
+        }
+
+        h1, h2 {
+            font-family: 'DIN', sans-serif; /* Replace 'DIN' with the desired font name */
+        }
+    </style>
 </head>
 <body>
 
@@ -12,8 +22,9 @@
     <div>
         <h2>User inputs:</h2>
         <ul>
-            <li><strong>Year:</strong> {{ year }}</li>
+            <li><strong>Time interval:</strong> {{ timeinterval }}</li>
             <li><strong>Geometry:</strong> {{ geom }}</li>
+            <li><strong>Number of aggregates scenes:</strong> {{ n_scenes }}</li>
         </ul>
     </div>
 
@@ -32,7 +43,7 @@
     </div>
 
     <div>
-        <h2>Medians and median absolute deviation (mad) by spectral band::</h2>
+        <h2>Medians and median absolute deviation (mad) by spectral band:</h2>
         <!-- Add the code for displaying the plot here -->
         <!-- For example, you can use an img tag with the plot's source -->
         <img src="plots/median_mad.png" alt="median_mad.png">
