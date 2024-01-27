@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>{{ page_title_text }}</title>
 
     <style>
@@ -20,33 +21,36 @@
     <h1>{{ title_text }}</h1>
 
     <div>
-        <h2>User inputs:</h2>
+        <h3>User inputs:</h3>
         <ul>
-            <li><strong>Time interval:</strong> {{ timeinterval }}</li>
-            <li><strong>Geometry:</strong> {{ geom }}</li>
-            <li><strong>Number of aggregates scenes:</strong> {{ n_scenes }}</li>
-        </ul>
+            <li><strong>Excluded Sensors:</strong> {{ sensors }}</li>
+            <li><strong>Maximal cloud coverage:</strong> {{ max_cc }} % </li>
+
+            <li><strong>Area of interest:</strong> {{ geom }}</li>
+        <ul>
+
+    </div>
+
+    <h3> Number of aggregates scenes: {{ n_scenes }} </h3>
+
+    <div>
+        <h3> Temporal distribution of acquisitions:</h3>
+        <img src="outputs/{{aoi_folder}}/plots/Aquisitions_{{ year }}.png" alt="outputs/{{aoi_folder}}/plots/Aquisitions_{{ year }}.png">    
     </div>
 
     <div>
-        <h2>Landsat Median Composite and Scene count:</h2>
-        <!-- Add the code for displaying the plot here -->
-        <!-- For example, you can use an img tag with the plot's source -->
-        <img src="plots/rgb_count.png" alt="rgb_count">    
+        <h3>Landsat Median Composite and Scene count:</h3>
+        <img src="outputs/{{aoi_folder}}/plots/scene_count_{{ year }}.png" alt="outputs/{{aoi_folder}}/plots/scene_count_{{ year }}.png">    
     </div>
 
     <div>
-        <h2>Means and coefficient of variation (cov) by spectral band:</h2>
-        <!-- Add the code for displaying the plot here -->
-        <!-- For example, you can use an img tag with the plot's source -->
-        <img src="plots/mean_cov.png" alt="mean_cov.png">
+        <h3>Means and coefficient of variation (cov) by spectral band:</h3>
+        <img src="outputs/{{aoi_folder}}/plots/mean_cov_{{ year }}.png" alt="outputs/{{aoi_folder}}/plots/mean_cov_{{ year }}.png">
     </div>
 
     <div>
-        <h2>Medians and median absolute deviation (mad) by spectral band:</h2>
-        <!-- Add the code for displaying the plot here -->
-        <!-- For example, you can use an img tag with the plot's source -->
-        <img src="plots/median_mad.png" alt="median_mad.png">
+        <h3>Medians and median absolute deviation (mad) by spectral band:</h3>
+        <img src="outputs/{{aoi_folder}}/plots/median_mad_{{ year }}.png" alt="outputs/{{aoi_folder}}/plots/median_mad_{{ year }}.png">
     </div>
 
 </body>
