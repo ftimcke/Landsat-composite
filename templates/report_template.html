@@ -24,14 +24,13 @@
         <h3>User inputs:</h3>
         <ul>
             <li><strong>Area of interest:</strong> {{ geom }}</li>
+            <li><strong>Used Sensors:</strong> {{ sensors }}</li>
             <li><strong>Excluded Sensors:</strong> {{ excluded_sensor }}</li>
-            <li><strong>Maximal cloud coverage:</strong> {{ max_cc }} % </li>
+            <li><strong>Maximal cloud coverage included:</strong> {{ max_cc }} % </li>
 
         <ul>
 
     </div>
-
-    <h3> Number of aggregates scenes: {{ n_scenes }} </h3>
 
     <div>
         <h3> Temporal distribution of acquisitions:</h3>
@@ -44,12 +43,12 @@
     </div>
 
     <div>
-        <h3>Means and coefficient of variation (cov) by spectral band:</h3>
+        <h3>Mean and coefficient of variation (cov) by spectral band:</h3>
         <img src="outputs/{{aoi_folder}}/plots/mean_cov_{{ year }}.png" alt="outputs/{{aoi_folder}}/plots/mean_cov_{{ year }}.png">
     </div>
 
     <div>
-        <h3>Medians and median absolute deviation (mad) by spectral band:</h3>
+        <h3>Median and median absolute deviation (mad) by spectral band:</h3>
         <img src="outputs/{{aoi_folder}}/plots/median_mad_{{ year }}.png" alt="outputs/{{aoi_folder}}/plots/median_mad_{{ year }}.png">
     </div>
 
